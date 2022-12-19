@@ -54,12 +54,14 @@
             </div>
           </div>
 
-		  <!-- Email / Geburtsdatum - row -->
+		  <!-- Email eigene Zeile -->
 		  
             <div class="col m-2">
               <input type="email" class="form-control" placeholder="Email-Adresse" name="email" id="email">
             </div>
-            <div class="m-2">
+
+			<!-- Geburtsdatum eigene Zeile -->
+            <div class="m-2 p-2">
 				<label for="birthday">Geburtsdatum: </label>
 				<input type="date" id="birthday" name="birthday">
             </div>
@@ -67,15 +69,13 @@
 
 		  
 
-		  <!-- AGB - checkbox u. link / radio buttons ja/nein für Annulations-Versicherung -row -->
-		  <div class="row">
-            <div class="col m-2">
-              <input type="text" class="form-control" placeholder="Enter email" name="email">
-            </div>
-            <div class="col m-2">
-              <input type="password" class="form-control" placeholder="Enter password" name="pswd">
-            </div>
-          </div>
+		  <!-- AGB - checkbox  -->
+		  <div class="m-2 p-2">
+			<input class="form-check-input" type="checkbox" id="agbCheck" name="agbCheck" value="AGB's gelesen" checked>
+			  <label class="form-check-label">Ich habe die AGB's gelesen und verstanden</label>
+			</div> 
+
+			
 
 		  <!-- Anmerkungen - Textfeld-->
 		  
@@ -83,14 +83,14 @@
 				<label class="form-label" for="comments">Anmerkungen:</label>
 				<textarea class="form-control" id="comments" rows="5" placeholder="zusätzliche Information oder Fragen hier eingeben" name="comments" form="bookingForm">
 			</div>-->
-		  
 
+		<!-- Anmelde-Button-->
+		<div class="p-2 m-2">
+			<input type="submit" value="Anmelden">            
+		</div>
+		
+	  </div>	
 		  
-            <div class="m-2">
-				<input type="submit" value="Anmelden">            
-			</div>
-          
-
       </form>  
 
 	   
