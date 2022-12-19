@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script source="scripts/script.js"></script>
+  <link href="styles/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container mt-3">	
+    <form onsubmit="return validateForm()" id="bookingForm">
+
+        <!-- Vorname/Nachname-row-->
+        <div class="row">
+          <div class="col m-2">
+            <input type="text" class="form-control" placeholder="Vorname" name="fName" id="fName">
+          </div>
+          <div class="col m-2">
+            <input type="text" class="form-control" placeholder="Nachname" name="lName" id="lName">
+          </div>
+        </div>
+
+        <!-- Strasse / Nr. - row -->
+          <div class="row">
+            <div class="col m-2">
+              <input type="text" class="form-control" placeholder="Enter email" name="email">
+            </div>
+            <div class="col m-2">
+              <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+            </div>
+          </div>
+
+		  <!-- PLZ / Ort-row-->
+          <div class="row">
+            <div class="col m-2">
+              <input type="text" class="form-control" placeholder="Enter email" name="email">
+            </div>
+            <div class="col m-2">
+              <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+            </div>
+          </div>
+
+		  <!-- Email / Geburtsdatum - row -->
+		  <div class="row">
+            <div class="col m-2">
+              <input type="text" class="form-control" placeholder="Enter email" name="email">
+            </div>
+            <div class="col m-2">
+              <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+            </div>
+          </div>
+
+		  <!-- Telefon G / Telefon P - row -->
+		  <div class="row">
+            <div class="col m-2">
+              <input type="text" class="form-control" placeholder="Enter email" name="email">
+            </div>
+            <div class="col m-2">
+              <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+            </div>
+          </div>
+
+		  <!-- AGB - checkbox u. link / radio buttons ja/nein für Annulations-Versicherung -row -->
+		  <div class="row">
+            <div class="col m-2">
+              <input type="text" class="form-control" placeholder="Enter email" name="email">
+            </div>
+            <div class="col m-2">
+              <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+            </div>
+          </div>
+
+		 
+
+      </form>  
+
+	   <!-- Anmerkungen - Textfeld-->
+	   <div class="row mb-3">
+		<div class="col m-2">
+			<label class="form-label" for="comments">Anmerkungen:</label>
+			<textarea class="form-control" id="comments" rows="5" placeholder="zusätzliche Information oder Fragen hier eingeben" name="comments" form="bookingForm">
+		</div>
+	  </div>
+
+	 <!-- <button onclick="validateFirstName();validateLastName();validateAge();" class="btn btn-primary">Anmelden</button> -->
+	</div>
+</body>
+</html>
