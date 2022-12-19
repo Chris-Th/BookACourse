@@ -27,42 +27,45 @@
         <!-- Strasse / Nr. - row -->
           <div class="row">
             <div class="col m-2">
-              <input type="text" class="form-control" placeholder="Enter email" name="email">
+              <input type="text" class="form-control" placeholder="Strasse" name="str" id="str">
             </div>
             <div class="col m-2">
-              <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+              <input type="number" class="form-control" placeholder="Nr." name="strNr" id="strNr">
             </div>
           </div>
 
 		  <!-- PLZ / Ort-row-->
           <div class="row">
             <div class="col m-2">
-              <input type="text" class="form-control" placeholder="Enter email" name="email">
+              <input type="number" class="form-control" placeholder="PLZ" name="plz" id="plz">
             </div>
             <div class="col m-2">
-              <input type="password" class="form-control" placeholder="Enter password" name="pswd">
-            </div>
-          </div>
-
-		  <!-- Email / Geburtsdatum - row -->
-		  <div class="row">
-            <div class="col m-2">
-              <input type="text" class="form-control" placeholder="Enter email" name="email">
-            </div>
-            <div class="col m-2">
-              <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+              <input type="text" class="form-control" placeholder="Wohnort" name="ort" id="ort">
             </div>
           </div>
 
 		  <!-- Telefon G / Telefon P - row -->
 		  <div class="row">
             <div class="col m-2">
-              <input type="text" class="form-control" placeholder="Enter email" name="email">
+              <input type="number" class="form-control" placeholder="Telefon G" name="telG" id="telG">
             </div>
             <div class="col m-2">
-              <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+              <input type="number" class="form-control" placeholder="Telefon P" name="telP" id="telP">
             </div>
           </div>
+
+		  <!-- Email / Geburtsdatum - row -->
+		  
+            <div class="col m-2">
+              <input type="email" class="form-control" placeholder="Email-Adresse" name="email" id="email">
+            </div>
+            <div class="m-2">
+				<label for="birthday">Geburtsdatum: </label>
+				<input type="date" id="birthday" name="birthday">
+            </div>
+          
+
+		  
 
 		  <!-- AGB - checkbox u. link / radio buttons ja/nein für Annulations-Versicherung -row -->
 		  <div class="row">
@@ -74,17 +77,24 @@
             </div>
           </div>
 
-		 
+		  <!-- Anmerkungen - Textfeld-->
+		  
+			<!--<div class="m-2">
+				<label class="form-label" for="comments">Anmerkungen:</label>
+				<textarea class="form-control" id="comments" rows="5" placeholder="zusätzliche Information oder Fragen hier eingeben" name="comments" form="bookingForm">
+			</div>-->
+		  
+
+		  
+            <div class="m-2">
+				<input type="submit" value="Anmelden">            
+			</div>
+          
 
       </form>  
 
-	   <!-- Anmerkungen - Textfeld-->
-	   <div class="row mb-3">
-		<div class="col m-2">
-			<label class="form-label" for="comments">Anmerkungen:</label>
-			<textarea class="form-control" id="comments" rows="5" placeholder="zusätzliche Information oder Fragen hier eingeben" name="comments" form="bookingForm">
-		</div>
-	  </div>
+	   
+	   
 
 	 <!-- <button onclick="validateFirstName();validateLastName();validateAge();" class="btn btn-primary">Anmelden</button> -->
 	</div>
