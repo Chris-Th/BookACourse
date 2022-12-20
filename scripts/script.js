@@ -41,7 +41,7 @@
 
 	function validateFirstName() {
 		let inputElement = document.getElementById("fname");
-    let fNameValue = inputElement.value;
+    	let fNameValue = inputElement.value;
 		// let letters = /^[A-Za-z]+$/;
 
 		if (!fNameValue) {
@@ -61,7 +61,7 @@
 
 	function validateLastName() {
 		let inputElement = document.getElementById("lname");
-    let lNameValue = inputElement.value;
+    	let lNameValue = inputElement.value;
 
 		if (!lNameValue) {
 			// leerer String
@@ -80,7 +80,7 @@
 
 	function validateStreet() {
 		let inputElement = document.getElementById("street");
-    let streetValue = inputElement.value;
+    	let streetValue = inputElement.value;
 
 		if (!streetValue) {
 			// leerer String
@@ -94,7 +94,7 @@
 
 	function validateStreetNr() {
 		let inputElement = document.getElementById("streetNr");
-    let streetNrValue = inputElement.value;
+    	let streetNrValue = inputElement.value;
 
 		if (!streetNrValue) {
 			alert("Bitte die Hausnummer eingeben.");
@@ -123,7 +123,7 @@
 
 	function validatePlz() {
 		let inputElement = document.getElementById("plz");
-    let plzValue = inputElement.value;
+    	let plzValue = inputElement.value;
 
 		if (!plzValue.match(fourDigits)) {
 			alert('Bitte im Feld "PLZ" eine in der Schweiz gültige Postleitzahl (vierstellige Zahl) eingeben.');
@@ -131,6 +131,20 @@
 		} else {
 			console.log(plzValue);
 			return true;
+		}
+	}
+
+	function validateOrt() {
+		let inputElement = document.getElementById("ort");
+    	let ortValue = inputElement.value;
+
+		if (!ortValue) {
+			// leerer String
+			alert('Im Feld "Wohnort" bitte Ortsnamen eingeben.');
+			return false;
+		} else {
+			console.log(ortValue)
+			return true
 		}
 	}
 
