@@ -1,5 +1,5 @@
-	function validateForm() {
-    let fName = document.getElementById("fName");
+	/*function validateForm() {
+    let fName = document.getElementById("fName"); console.log(fName);
     let lName = document.getElementById("lName");
     let street = document.getElementById("street");
     let streetNr = document.getElementById("streetNr");
@@ -12,14 +12,42 @@
     let agbCheck = document.getElementById("agbCheck");
     let versJa = document.getElementById("versJa");
     let versNein = document.getElementById("versNein"); 
+*/
+		//===================Versuch nach Chris=================
+	function validateForm() {
 
+		if (!validateFirstName()) return false;
+		if (!validateLastName()) return false;
+		if (!validatetreet()) return false;
+		if (!validateStreetNr()) return false;
+		if (!validatePlz()) return false;
+		if (!validateOrt()) return false;
+		if (!validateTelG()) return false;
+		if (!validateTelP()) return false;
+		if (!validateEmail()) return false;
+		if (!validateBirthdate()) return false;
+		if (!validateAgbCheck()) return false;
+		if (!validateVersJa() && !validateVersNein()) return false;
+
+		alert('Alles gut');
+		return true;
+		
+	}
+
+
+
+
+
+
+		//============== Versuch nach w3-Beispiel================
+		/*
 if(fNameValidation(fName)) {
 	if(lNameValidation(lName)) {
 	/*	if(streetValidation(street)) {
 			if(streetNrValidation(streetNr)) {
 				if
 			}
-		} */
+		} 
 	}
 }
 return false;
@@ -29,7 +57,7 @@ function fNameValidation(fName) {
 
 	var letters = /^[A-Za-z]+$/;
 
-	if(fName.value.match(letters)) {
+	dfdfif(fName.value.match(letters)) {
 
 		return true;
 
@@ -70,4 +98,4 @@ function bookingForm() {
             return false;
         }
     }
-		*/
+	*/
