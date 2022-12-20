@@ -18,8 +18,9 @@
 
 		if (!validateFirstName()) return false;
 		if (!validateLastName()) return false;
-		if (!validatetreet()) return false;
+		if (!validateStreet()) return false;
 		if (!validateStreetNr()) return false;
+		if (!validateNrAdd()) return false;
 		if (!validatePlz()) return false;
 		if (!validateOrt()) return false;
 		if (!validateTelG()) return false;
@@ -31,10 +32,74 @@
 
 		alert('Alles gut');
 		return true;
-		
 	}
 
+	function validateFirstName() {
+		let inputElement = document.getElementById("fname");
+    let fNameValue = inputElement.value;
+		let letters = /^[A-Za-z]+$/;
 
+		if (!fNameValue) {
+			// leerer String
+			alert("Bitte Vornamen eingeben");
+			return false;
+		}
+			// nicht leerer String
+			else if (!fNameValue.match(letters)) {
+				alert("Bitte beim Vornamen nur Buchstaben eingeben.");
+				return false;
+			} else {
+				console.log(fNameValue);
+				return true;
+			}
+	}
+
+	function validateLastName() {
+		let inputElement = document.getElementById("lname");
+    let lNameValue = inputElement.value;
+		let letters = /^[A-Za-z]+$/;
+
+		if (!lNameValue) {
+			// leerer String
+			alert("Bitte Vornamen eingeben");
+			return false;
+		}
+			// nicht leerer String
+			else if (!lNameValue.match(letters)) {
+				alert("Bitte beim Nachnamen nur Buchstaben eingeben.");
+				return false;
+			} else {
+				console.log(lNameValue);
+				return true;
+			}
+	}
+
+	function validateStreet() {
+		let inputElement = document.getElementById("street");
+    let streetValue = inputElement.value;
+
+		if (!streetValue) {
+			// leerer String
+			alert("Bitte Strassennamen eingeben.");
+			return false;
+		} else {
+			console.log(streetValue)
+			return true
+		}
+	}
+
+	function validateStreetNr() {
+		let inputElement = document.getElementById("streetNr");
+    let streetNrValue = inputElement.value;
+
+		if (!streetNrValue) {
+			alert("Bitte die Hausnummer eingeben.");
+			return false;
+		} else {
+			console.log(streetNrValue);
+			return true;
+		}
+	}
 
 
 
