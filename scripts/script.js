@@ -35,8 +35,9 @@
 	}
 
 	const letters = /^[A-Za-z]+$/;
-	const oneLetter = /^[A-Za-z]{1}$/
+	const oneLetter = /^[A-Za-z]{1}$/;
 	const numbers = /^[0-9]+$/;
+	const fourDigits = /^[0-9]{4}$/;
 
 	function validateFirstName() {
 		let inputElement = document.getElementById("fname");
@@ -99,7 +100,7 @@
 			alert("Bitte die Hausnummer eingeben.");
 			return false;
 		} else if (!streetNrValue.match(numbers)) {
-			alert("In diesem Feld sind nur Nummern erlaubt. Ein Buchstaben-Zusatz ist im nächsten Feld möglich.");
+			alert('Im Feld "Hausnummer" sind nur Nummern erlaubt. Ein Buchstaben-Zusatz kann im Feld "Zusatz" eingegeben werden.');
 			return false;
 		} else {
 			console.log(streetNrValue);
@@ -112,10 +113,23 @@
     let nrAddValue = inputElement.value;
 
 		if (!nrAddValue.match(oneLetter)) {
-			alert("Bitte einen einstelligen Buchstabenzusatz eingeben oder Feld leer lassen.");
+			alert('Im Feld "Zusatz" bitte einen einstelligen Buchstabenzusatz eingeben oder das Feld leer lassen.');
 			return false;
 		} else {
-			console.log(streetNrValue);
+			console.log(nrAddValue);
+			return true;
+		}
+	}
+
+	function validatePlz() {
+		let inputElement = document.getElementById("plz");
+    let plzValue = inputElement.value;
+
+		if (!plzValue.match(fourDigits)) {
+			alert('Bitte im Feld "PLZ" eine in der Schweiz gültige Postleitzahl (vierstellige Zahl) eingeben.');
+			return false;
+		} else {
+			console.log(plzValue);
 			return true;
 		}
 	}

@@ -25,30 +25,38 @@
 			</div>
 		</div>
 
-			<!-- Strasse / Nr. - row -->
+			<!-- Strasse / Nr. / Zusatz - row -->
 		<div class="row">
-			<div class="col m-2">
-				<input type="text" class="form-control" placeholder="Strasse" name="street" id="street">
-			</div>
 			<div class="col m-2">
 				<div class="row">
 					<div class="col-8">
-						<input type="text" class="form-control" placeholder="Hausnummer" name="streetNr" id="streetNr">
+						<input type="text" class="form-control" placeholder="Strasse" name="street" id="street">
 					</div>
 					<div class="col-4">
-						<input type="text" class="form-control" placeholder="Zusatz" name="NrAdd" id="NrAdd">
+						<div class="row">
+							<div class="col-7">
+								<input type="text" class="form-control" placeholder="Nummer" name="streetNr" id="streetNr">
+							</div>
+							<div class="col-5">
+								<input type="text" class="form-control" placeholder="Zusatz" name="nrAdd" id="nrAdd">
+							</div>
+						</div>	
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
 
 			<!-- PLZ / Ort-row-->
 		<div class="row">
 			<div class="col m-2">
-				<input type="number" class="form-control" placeholder="PLZ" name="plz" id="plz">
-			</div>
-			<div class="col m-2">
-				<input type="text" class="form-control" placeholder="Wohnort" name="ort" id="ort">
+				<div class="row">
+					<div class="col-3">
+						<input type="text" class="form-control" placeholder="PLZ" name="plz" id="plz">
+					</div>
+					<div class="col-9">
+						<input type="text" class="form-control" placeholder="Wohnort" name="ort" id="ort">
+					</div>
+				</div>
 			</div>
 		</div>
 
