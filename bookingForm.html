@@ -10,10 +10,10 @@
   <script source="scripts/script.js"></script>
   <link href="styles/style.css" rel="stylesheet">
 </head>
-<body>
+<body onload="document.bookingForm.fName.focus();">
 	<div class="container mt-3">	
    
-		<form onsubmit="return validateForm()" id="bookingForm">
+		<form onsubmit="return validateForm()" id="bookingForm" name="bookingForm">
 
 			<!-- Vorname/Nachname-row-->
 		<div class="row">
@@ -48,10 +48,10 @@
 			<!-- Telefon G / Telefon P - row -->
 		<div class="row">
 			<div class="col m-2">
-				<input type="tel" class="form-control" placeholder="Telefon G" name="telG" id="telG">
+				<input type="tel" class="form-control" placeholder="Tel G:  0.. ... .. .." name="telG" id="telG">
 			</div>
 			<div class="col m-2">
-				<input type="tel" class="form-control" placeholder="Telefon P" name="telP" id="telP">
+				<input type="tel" class="form-control" placeholder="Tel P:  0.. ... .. .." name="telP" id="telP">
 			</div>
 		</div>
 
@@ -72,18 +72,21 @@
 
 			<!-- AGB - checkbox  -->
 		<div class="m-2 p-2">
-			<input class="form-check-input" type="checkbox" id="agbCheck" name="agbCheck" value="AGB's gelesen" checked>
+			<input class="form-check-input" type="checkbox" id="agbCheck" name="agbCheck" value="AGB's gelesen" unchecked>
 			<label class="form-check-label">Ich habe die AGB's gelesen und verstanden</label>
 		</div> 
 
-		<!--Anullations-radio-buttons ja/nein-->
+		
+
+		<!-- Vers. Radio buttons-->
 		<div class="m-2 p-2">
-		<p>Haben Sie eine Annulationsversicherung abgeschlossen?</p>
-		<div class="form-check form-switch m-2">
-			<input class="form-check-input" type="checkbox" id="vers" name="vers" value="yes" unchecked>
-			<label class="form-check-label" for="vers">Ja</label>
-		  </div> 
-		</div>				
+			<p>Haben Sie eine Annulationsversicherung abgeschlossen?</p>
+			<input class="form-check-input" type="radio" id="versJa" name="versJa" value="Ja">
+		 	<label for="versJa">Ja</label>
+			<span>  </span>
+	 		<input class="form-check-input" type="radio" name="versNein" id="versNein" value="Nein">
+		 	<label for="versNein">Nein</label><br>
+		 </div>
 
 			<!-- Anmerkungen - Textfeld-->
 			
