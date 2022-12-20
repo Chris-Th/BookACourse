@@ -34,10 +34,14 @@
 		return true;
 	}
 
+	const letters = /^[A-Za-z]+$/;
+	const oneLetter = /^[A-Za-z]{1}$/
+	const numbers = /^[0-9]+$/;
+
 	function validateFirstName() {
 		let inputElement = document.getElementById("fname");
     let fNameValue = inputElement.value;
-		let letters = /^[A-Za-z]+$/;
+		// let letters = /^[A-Za-z]+$/;
 
 		if (!fNameValue) {
 			// leerer String
@@ -57,11 +61,10 @@
 	function validateLastName() {
 		let inputElement = document.getElementById("lname");
     let lNameValue = inputElement.value;
-		let letters = /^[A-Za-z]+$/;
 
 		if (!lNameValue) {
 			// leerer String
-			alert("Bitte Vornamen eingeben");
+			alert("Bitte Nachnamen eingeben");
 			return false;
 		}
 			// nicht leerer String
@@ -94,6 +97,22 @@
 
 		if (!streetNrValue) {
 			alert("Bitte die Hausnummer eingeben.");
+			return false;
+		} else if (!streetNrValue.match(numbers)) {
+			alert("In diesem Feld sind nur Nummern erlaubt. Ein Buchstaben-Zusatz ist im nächsten Feld möglich.");
+			return false;
+		} else {
+			console.log(streetNrValue);
+			return true;
+		}
+	}
+
+	function validateNrAdd() {
+		let inputElement = document.getElementById("nrAdd");
+    let nrAddValue = inputElement.value;
+
+		if (!nrAddValue.match(oneLetter)) {
+			alert("Bitte einen einstelligen Buchstabenzusatz eingeben oder Feld leer lassen.");
 			return false;
 		} else {
 			console.log(streetNrValue);
