@@ -17,22 +17,22 @@
 
 			<!-- Vorname/Nachname-row-->
 		<div class="row">
-			<div class="col m-2">
+			<div class="col-sm mt-2">
 				<input type="text" class="form-control" placeholder="Vorname" name="fname" id="fname">
 			</div>
-			<div class="col m-2">
+			<div class="col-sm mt-2">
 				<input type="text" class="form-control" placeholder="Nachname" name="lname" id="lname">
 			</div>
 		</div>
 
 			<!-- Strasse / Nr. / Zusatz - row -->
 		<div class="row">
-			<div class="col m-2">
+			<div class="col-sm">
 				<div class="row">
-					<div class="col-8">
+					<div class="col-sm-6 mt-2">
 						<input type="text" class="form-control" placeholder="Strasse" name="street" id="street">
 					</div>
-					<div class="col-4">
+					<div class="col-sm-6 mt-2">
 						<div class="row">
 							<div class="col-7">
 								<input type="text" class="form-control" placeholder="Nummer" name="streetNr" id="streetNr">
@@ -48,12 +48,12 @@
 
 			<!-- PLZ / Ort-row-->
 		<div class="row">
-			<div class="col m-2">
+			<div class="col-sm">
 				<div class="row">
-					<div class="col-3">
+					<div class="col-sm-3 mt-2">
 						<input type="text" class="form-control" placeholder="PLZ" name="plz" id="plz">
 					</div>
-					<div class="col-9">
+					<div class="col-sm-9 mt-2">
 						<input type="text" class="form-control" placeholder="Wohnort" name="ort" id="ort">
 					</div>
 				</div>
@@ -62,40 +62,52 @@
 
 			<!-- Telefon G / Telefon P - row -->
 		<div class="row">
-			<div class="col m-2">
+			<div class="col-sm-6 mt-2">
 				<input type="tel" class="form-control" placeholder="Tel G:  0.. ... .. .." name="telG" id="telG">
 			</div>
-			<div class="col m-2">
+			<div class="col-sm-6 mt-2">
 				<input type="tel" class="form-control" placeholder="Tel P:  0.. ... .. .." name="telP" id="telP">
 			</div>
 		</div>
 
-			<!-- Email eigene Zeile -->
-		<div class="col m-2">
-			<input type="email" class="form-control" placeholder="Email-Adresse" name="email" id="email">
+			<!-- Email / Geburtsdatum - row -->
+		<div class="row">
+			<div class="col-sm-6 mt-2">
+				<input type="email" class="form-control" placeholder="Email-Adresse" name="email" id="email">
+			</div>
+			<div class="col-sm-6 mt-2">
+				<div class="row">
+					<div class="col m-1">
+						<label for="birthdate">Geburtstag: </label>
+						<input type="date" id="birthdate" name="birthdate">
+					</div>
+				</div>
+				
+			</div>
 		</div>
+			
+
 
 				<!-- Geburtsdatum eigene Zeile -->
-		<div class="m-2 p-2">
-			<label for="birthday">Geburtsdatum: </label>
-			<input type="date" id="birthdate" name="birthdate">
-		</div>
+		
 
 			<!-- AGB - checkbox  -->
-		<div class="m-2 p-2">
-			<input class="form-check-input" type="checkbox" id="agbCheck" name="agbCheck" value="AGB's gelesen" unchecked>
-			<label class="form-check-label">Ich habe die AGB's gelesen und verstanden</label>
-		</div> 
+		<div class="row">
+			<div class="col-sm-6 mt-4">
+				<input class="form-check-input" type="checkbox" id="agbCheck" name="agbCheck" value="AGB's gelesen" unchecked>
+				<label class="form-check-label">Ich habe die AGB's gelesen und verstanden</label>
+			</div> 
 
-		<!-- Vers. Radio buttons-->
-		<div class="m-2 p-2">
-			<p>Haben Sie eine Annulationsversicherung abgeschlossen?</p>
-			<input class="form-check-input" type="radio" id="versJa" name="versJa" value="Ja">
-		 	<label for="versJa">Ja</label>
-			<span>  </span>
-	 		<input class="form-check-input" type="radio" name="versNein" id="versNein" value="Nein">
-		 	<label for="versNein">Nein</label><br>
-		 </div>
+			<!-- Vers. Radio buttons-->
+			<div class="col-sm-6 mt-4">
+				<p>Haben Sie eine Annulationsversicherung abgeschlossen?</p>
+				<input class="form-check-input" type="radio" id="versJa" name="versJa" value="Ja">
+				<label for="versJa">Ja</label>
+				<span>  </span>
+				<input class="form-check-input" type="radio" name="versNein" id="versNein" value="Nein">
+				<label for="versNein">Nein</label><br>
+			</div>
+		</div>
 
 			<!-- Anmerkungen - Textfeld-->
 			
@@ -105,8 +117,10 @@
 				</div>-->
 
 			<!-- Anmelde-Button-->
-		<div class="p-2 m-2">
-			<input type="submit" value="Anmelden">            
+		<div class="row">
+			<div class="col-sm-12 d-grid my-4">
+				<input type="submit" value="Anmelden"> 
+			</div>	           
 		</div>
 				
 		  
