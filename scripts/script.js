@@ -209,6 +209,27 @@
 	}
 
 
+	function 
+
+	function validateInsRadioBtns() {
+		let inputElementJa = document.getElementById("versJa");
+		let jaValue = inputElementJa.value;
+		let inputElementNein = document.getElementById("versNein");
+		let neinValue = inputElementNein.value;
+
+		function validateVersJa() {
+			if (!jaValue) {
+				return false
+			}
+		}
+		if (!jaValue) {
+			return false;
+		} else if (!neinValue) {
+			alert('Bitte durch klicken auf "ja" oder "nein" angeben, ob Sie eine Anulationsversicherung abgeschlossen haben')
+		}
+	}
+
+
 
 
 		//============== Versuch nach w3-Beispiel================
