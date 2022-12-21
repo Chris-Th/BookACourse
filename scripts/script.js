@@ -47,52 +47,52 @@
 
 	function validateFirstName() {
 		let inputElement = document.getElementById("fname");
-    	let fNameValue = inputElement.value;
+    	let value = inputElement.value;
 
-		if (!fNameValue) {
+		if (!value) {
 			alert("Bitte Vornamen eingeben");
 			return false;
-			} else if (!fNameValue.match(letters)) {
+			} else if (!value.match(letters)) {
 				alert("Bitte beim Vornamen nur Buchstaben eingeben.");
 				return false;
 			} else {
 				localStorageSet("fname", value);
-				console.log(fNameValue);
+				console.log(value);
 				return true;
 			}
 	}
 
 	function validateLastName() {
 		let inputElement = document.getElementById("lname");
-    	let lNameValue = inputElement.value;
+    	let value = inputElement.value;
 
-		if (!lNameValue) {
+		if (!value) {
 			// leerer String
 			alert("Bitte Nachnamen eingeben");
 			return false;
 		}
 			// nicht leerer String
-			else if (!lNameValue.match(letters)) {
+			else if (!value.match(letters)) {
 				alert("Bitte beim Nachnamen nur Buchstaben eingeben.");
 				return false;
 			} else {
 				localStorageSet("lname", value);
-				console.log(lNameValue);
+				console.log(value);
 				return true;
 			}
 	}
 
 	function validateStreet() {
 		let inputElement = document.getElementById("street");
-    	let streetValue = inputElement.value;
+    	let value = inputElement.value;
 
-		if (!streetValue) {
+		if (!value) {
 			// leerer String
 			alert("Bitte Strassennamen eingeben.");
 			return false;
 		} else {
 			localStorageSet("street", value);
-			console.log(streetValue)
+			console.log(value)
 			return true
 		}
 	}

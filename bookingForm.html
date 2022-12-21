@@ -13,115 +13,107 @@
 </head>
 <body onload="document.bookingForm.fname.focus();">
 	<div class="container mt-3">	
-   
+	
 		<form action="confirm.html" onsubmit="return validateForm()" id="bookingForm" name="bookingForm">
 
-			<!-- Vorname/Nachname-row-->
-		<div class="row">
-			<div class="col-sm mt-3">
-				<input type="text" class="form-control" placeholder="Vorname" name="fname" id="fname">
+				<!-- Vorname/Nachname-row-->
+			<div class="row">
+				<div class="col-sm mt-3">
+					<input type="text" class="form-control" placeholder="Vorname" name="fname" id="fname">
+				</div>
+				<div class="col-sm mt-3">
+					<input type="text" class="form-control" placeholder="Nachname" name="lname" id="lname">
+				</div>
 			</div>
-			<div class="col-sm mt-3">
-				<input type="text" class="form-control" placeholder="Nachname" name="lname" id="lname">
-			</div>
-		</div>
 
-			<!-- Strasse / Nr. / Zusatz - row -->
-		<div class="row">
-			<div class="col-sm">
-				<div class="row">
-					<div class="col-sm-6 mt-3">
-						<input type="text" class="form-control" placeholder="Strasse" name="street" id="street">
-					</div>
-					<div class="col-sm-6 mt-3">
-						<div class="row">
-							<div class="col-7">
-								<input type="text" class="form-control" placeholder="Nummer" name="streetNr" id="streetNr">
-							</div>
-							<div class="col-5">
-								<input type="text" class="form-control" placeholder="Zusatz" name="nrAdd" id="nrAdd">
-							</div>
-						</div>	
+				<!-- Strasse / Nr. / Zusatz - row -->
+			<div class="row">
+				<div class="col-sm">
+					<div class="row">
+						<div class="col-sm-6 mt-3">
+							<input type="text" class="form-control" placeholder="Strasse" name="street" id="street">
+						</div>
+						<div class="col-sm-6 mt-3">
+							<div class="row">
+								<div class="col-7">
+									<input type="text" class="form-control" placeholder="Nummer" name="streetNr" id="streetNr">
+								</div>
+								<div class="col-5">
+									<input type="text" class="form-control" placeholder="Zusatz" name="nrAdd" id="nrAdd">
+								</div>
+							</div>	
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-			<!-- PLZ / Ort-row-->
-		<div class="row">
-			<div class="col-sm">
-				<div class="row">
-					<div class="col-sm-3 mt-3">
-						<input type="text" class="form-control" placeholder="PLZ" name="plz" id="plz">
-					</div>
-					<div class="col-sm-9 mt-3">
-						<input type="text" class="form-control" placeholder="Wohnort" name="ort" id="ort">
-					</div>
-				</div>
-			</div>
-		</div>
-
-			<!-- Telefon G / Telefon P - row -->
-		<div class="row">
-			<div class="col-sm-6 mt-3">
-				<input type="tel" class="form-control" placeholder="Tel. P. oder Mobil (+12 34 567 89 01)" name="telP" id="telP">
-			</div>
-			<div class="col-sm-6 mt-3">
-				<input type="tel" class="form-control" placeholder="Tel. G. (+12 34 567 89 01) -optional" name="telG" id="telG">
-			</div>
-		</div>
-
-			<!-- Email / Geburtsdatum - row -->
-		<div class="row">
-			<div class="col-sm-6 mt-3">
-				<input type="email" class="form-control" placeholder="Email-Adresse" name="email" id="email">
-			</div>
-			<div class="col-sm-6 mt-3">
-				<div class="row">
-					<div class="col m-1">
-						<label for="birthdate">Geburtstag: </label>
-						<input type="date" id="birthdate" name="birthdate">
+				<!-- PLZ / Ort-row-->
+			<div class="row">
+				<div class="col-sm">
+					<div class="row">
+						<div class="col-sm-3 mt-3">
+							<input type="text" class="form-control" placeholder="PLZ" name="plz" id="plz">
+						</div>
+						<div class="col-sm-9 mt-3">
+							<input type="text" class="form-control" placeholder="Wohnort" name="ort" id="ort">
+						</div>
 					</div>
 				</div>
-				
 			</div>
-		</div>
 
-			<!-- AGB - checkbox  -->
-		<div class="row">
-			<div class="col-sm-6 mt-3">
-				<input class="form-check-input" type="checkbox" id="agbCheck" name="agbCheck" value="AGB's gelesen" unchecked>
-				<label class="form-check-label">Ich habe die AGB's gelesen und verstanden</label>
-			</div> 
-
-			<!-- Vers. Radio buttons-->
-			<div class="col-sm-6 mt-3">
-				<p>Haben Sie eine Annulationsversicherung abgeschlossen?</p>
-				<input class="form-check-input" type="radio" name="vers" id="versJa" value="Ja">
-				<label for="versJa">Ja</label>
-				<span>  </span>
-				<input class="form-check-input" type="radio" name="vers" id="versNein" value="Nein">
-				<label for="versNein">Nein</label><br>
+				<!-- Telefon G / Telefon P - row -->
+			<div class="row">
+				<div class="col-sm-6 mt-3">
+					<input type="tel" class="form-control" placeholder="Tel. P. oder Mobil (+12 34 567 89 01)" name="telP" id="telP">
+				</div>
+				<div class="col-sm-6 mt-3">
+					<input type="tel" class="form-control" placeholder="Tel. G. (+12 34 567 89 01) -optional" name="telG" id="telG">
+				</div>
 			</div>
-		</div>
 
-			<!-- Anmelde-Button-->
-		<div class="row">
-			<div class="col-sm-12 d-grid my-5">
-				<input type="submit" value="Anmelden" class="btn btn-primary"> 
-			</div>	           
-		</div>
-      </form>  
+				<!-- Email / Geburtsdatum - row -->
+			<div class="row">
+				<div class="col-sm-6 mt-3">
+					<input type="email" class="form-control" placeholder="Email-Adresse" name="email" id="email">
+				</div>
+				<div class="col-sm-6 mt-3">
+					<div class="row">
+						<div class="col m-1">
+							<label for="birthdate">Geburtstag: </label>
+							<input type="date" id="birthdate" name="birthdate">
+						</div>
+					</div>
+					
+				</div>
+			</div>
 
-	  <!--<div class="p-2 m-2">
-		<button onclick="validateForm();">Validieren</button> -->           
+				<!-- AGB - checkbox  -->
+			<div class="row">
+				<div class="col-sm-6 mt-3">
+					<input class="form-check-input" type="checkbox" id="agbCheck" name="agbCheck" value="AGB's gelesen" unchecked>
+					<label class="form-check-label">Ich habe die AGB's gelesen und verstanden</label>
+				</div> 
+
+				<!-- Vers. Radio buttons-->
+				<div class="col-sm-6 mt-3">
+					<p>Haben Sie eine Annulationsversicherung abgeschlossen?</p>
+					<input class="form-check-input" type="radio" name="vers" id="versJa" value="Ja">
+					<label for="versJa">Ja</label>
+					<span>  </span>
+					<input class="form-check-input" type="radio" name="vers" id="versNein" value="Nein">
+					<label for="versNein">Nein</label><br>
+				</div>
+			</div>
+
+				<!-- Anmelde-Button-->
+			<div class="row">
+				<div class="col-sm-12 d-grid my-5">
+					<input type="submit" value="Anmelden" class="btn btn-primary"> 
+				</div>	           
+			</div>
+		</form>  
+
 	</div>
-	   
-	   
-
-	 <!-- <button onclick="validateFirstName();validateLastName();validateAge();" class="btn btn-primary">Anmelden</button> -->
-	</div>
-
 	
 </body>
 </html>

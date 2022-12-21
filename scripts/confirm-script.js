@@ -1,8 +1,13 @@
+function localStorageSet(key, value) {
+    localStorage.setItem(key, value);
+}
+
 function getLocalStorage(key) {
-    return localStorage.getItem(key)
+    return localStorage.getItem(key);
 }
 
 function confirmUserData() {
+    
     let fName = getLocalStorage("fname");
     let lName = getLocalStorage("lname");
     let streetName = getLocalStorage("street");
@@ -15,8 +20,10 @@ function confirmUserData() {
     let mail = getLocalStorage("email");
     let bornOn = getLocalStorage("birthdate");
     let insurance = getLocalStorage("versicherung");
-}
 
-    let confirmationMsg = `<p><span class="label">Vorname:</span><span class="value"> ${fName}</span></p>`;
+
+    let confirmationMsg = `<p><span class="label">Vorname:</span><span class="value"> ${fName} ${lName}</span></p>`;
 
     document.getElementById("dataConfirmation").innerHTML = confirmationMsg;
+
+}
