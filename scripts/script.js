@@ -41,7 +41,9 @@
 	const telInt = /^\+?([0-9]{2})\)?[-. ]?([0-9]{2})[-. ]?([0-9]{3})[-. ]?([0-9]{2})[-. ]?([0-9]{2})$/;
 	const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-
+	function localStorageSet(key, value) {
+		localStorage.setItem(key, value);
+	}
 
 	function validateFirstName() {
 		let inputElement = document.getElementById("fname");
@@ -54,6 +56,7 @@
 				alert("Bitte beim Vornamen nur Buchstaben eingeben.");
 				return false;
 			} else {
+				localStorageSet("fname", value);
 				console.log(fNameValue);
 				return true;
 			}
@@ -73,6 +76,7 @@
 				alert("Bitte beim Nachnamen nur Buchstaben eingeben.");
 				return false;
 			} else {
+				localStorageSet("lname", value);
 				console.log(lNameValue);
 				return true;
 			}

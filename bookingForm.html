@@ -9,11 +9,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="scripts/script.js"></script>
   <link href="styles/style.css" rel="stylesheet">
+  <script src="scripts/confirm-script.js"></script>
 </head>
 <body onload="document.bookingForm.fname.focus();">
 	<div class="container mt-3">	
    
-		<form onsubmit="return validateForm()" id="bookingForm" name="bookingForm">
+		<form action="confirm.html" onsubmit="return validateForm()" id="bookingForm" name="bookingForm">
 
 			<!-- Vorname/Nachname-row-->
 		<div class="row">
@@ -85,11 +86,6 @@
 				
 			</div>
 		</div>
-			
-
-
-				<!-- Geburtsdatum eigene Zeile -->
-		
 
 			<!-- AGB - checkbox  -->
 		<div class="row">
@@ -109,21 +105,12 @@
 			</div>
 		</div>
 
-			<!-- Anmerkungen - Textfeld-->
-			
-				<!--<div class="m-2">
-					<label class="form-label" for="comments">Anmerkungen:</label>
-					<textarea class="form-control" id="comments" rows="5" placeholder="zusätzliche Information oder Fragen hier eingeben" name="comments" form="bookingForm">
-				</div>-->
-
 			<!-- Anmelde-Button-->
 		<div class="row">
 			<div class="col-sm-12 d-grid my-5">
 				<input type="submit" value="Anmelden" class="btn btn-primary"> 
 			</div>	           
 		</div>
-				
-		  
       </form>  
 
 	  <!--<div class="p-2 m-2">

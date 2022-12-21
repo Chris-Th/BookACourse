@@ -9,12 +9,25 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script source="scripts/script.js"></script>
   <link href="styles/style.css" rel="stylesheet">
+  <script source="scripts/confirm-script.js"></script>
 </head>
 <body>
     <div class="container m-2 p-2">
-        <h5>Herzlichen Dank für Ihre Anmeldung!</h5>
-        <p>Wir werden uns demnächst mit Ihnen in Verbindung setzen.
-        </p>
+        <div class="row">
+            <div class="col-sm">
+                <h5>Herzlichen Dank für Ihre Anmeldung!</h5>
+                <p>Sie haben bei Ihrer Anmeldung untenstehende Angaben genacht. Bitte prüfen Sie sie nochmals auf ihre Richtigkeit:
+                </p>
+            </div>
+            
+            <!--Form Data Cofirmation-->
+            <div id="signUpDataConfirmation" role="alert"></div>
+            
+            <script>
+                writeConfirmation();
+            </script>
+
+        </div>
     </div>
     
 </body>
