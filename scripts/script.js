@@ -91,6 +91,7 @@
 			alert("Bitte Strassennamen eingeben.");
 			return false;
 		} else {
+			localStorageSet("street", value);
 			console.log(streetValue)
 			return true
 		}
@@ -230,18 +231,19 @@
 		let checkedNein = document.getElementById("versNein").checked;
 		
 		if (checkedJa) {
+			localStorageSet("versicherung", "eine Versicherung");
 			let ja = "versJa";
 			console.log(ja);
-			return "Versicherung abgeschlossen";
+			return true;
 		} 
 		else if (checkedNein) {
+			localStorageSet("versicherung", "keine Versicherung");
 			let nein = "versNein";
 			console.log(nein);
-			return "keine Versicherung abgeschlossen.";
+			return true;
 		} 
 		else {
 			alert('Bitte bei "Annulationsversicherung" "ja" oder "nein" auswählen.')
-			
 			return false;
 		}
 		
