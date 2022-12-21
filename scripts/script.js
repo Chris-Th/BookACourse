@@ -38,19 +38,16 @@
 	const oneLetter = /^[A-Za-z]{1}$/;
 	const numbers = /^[0-9]+$/;
 	const fourDigits = /^[0-9]{4}$/;
+	const telInt = /^\+?([0-9]{2})\)?[-. ]?([0-9]{2})[-. ]?([0-9]{3})[-. ]?([0-9]{2})[-. ]?([0-9]{2})$/;
 
 	function validateFirstName() {
 		let inputElement = document.getElementById("fname");
     	let fNameValue = inputElement.value;
-		// let letters = /^[A-Za-z]+$/;
 
 		if (!fNameValue) {
-			// leerer String
 			alert("Bitte Vornamen eingeben");
 			return false;
-		}
-			// nicht leerer String
-			else if (!fNameValue.match(letters)) {
+			} else if (!fNameValue.match(letters)) {
 				alert("Bitte beim Vornamen nur Buchstaben eingeben.");
 				return false;
 			} else {
@@ -145,6 +142,19 @@
 		} else {
 			console.log(ortValue)
 			return true
+		}
+	}
+
+	function validateTelG() {
+		let inputElement = document.getElementById("telG");
+    	let telGValue = inputElement.value;
+
+		if (!telGValue.match(telInt)) {
+			alert('Bitte Ihre Rufnummer mit Ländercode im internationalen Format (+12 34 567 89 10) eingeben.')
+			return false
+		} else {
+			console.log(telGValue);
+			return true;
 		}
 	}
 
