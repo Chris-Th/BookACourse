@@ -145,15 +145,42 @@
 		}
 	}
 
-	function validateTelG() {
-		let inputElement = document.getElementById("telG");
-    	let telGValue = inputElement.value;
 
-		if (!telGValue.match(telInt)) {
-			alert('Bitte Ihre Rufnummer mit Ländercode im internationalen Format (+12 34 567 89 10) eingeben.')
+	let inputElementTelG = document.getElementById("telG");
+	let telGValue = inputElementTelG.value;
+
+	let inputElementTelP = document.getElementById("telP");
+	let telPValue = inputElementTelP.value;
+	
+
+	function validateTelG() {
+		//let inputElement = document.getElementById("telG");
+    	//let telGValue = inputElement.value;
+
+		if (!telGValue && (!telPValue)) {
+			alert('Bitte mindestens eine Telefonnummer eingeben, wo wir Sie erreichen können.')
+			return false
+		} else if (!telGValue.match(telInt)) {
+			alert('Bitte Ihre Rufnummer mit Ländercode im internationalen Format (+12 34 567 89 01) eingeben.')
 			return false
 		} else {
 			console.log(telGValue);
+			return true;
+		}
+	}
+
+	function validateTelP() {
+		//let inputElement = document.getElementById("telP");
+    	//let telPValue = inputElement.value;
+
+		if (!telGValue && (!telPValue)) {
+			alert('Bitte mindestens eine Telefonnummer eingeben, wo wir Sie erreichen können.')
+			return false
+		} else if (!telPValue.match(telInt)) {
+			alert('Bitte Ihre Rufnummer mit Ländercode im internationalen Format (+12 34 567 89 01) eingeben.')
+			return false
+		} else {
+			console.log(telPValue);
 			return true;
 		}
 	}
