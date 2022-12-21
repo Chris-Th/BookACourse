@@ -39,6 +39,9 @@
 	const numbers = /^[0-9]+$/;
 	const fourDigits = /^[0-9]{4}$/;
 	const telInt = /^\+?([0-9]{2})\)?[-. ]?([0-9]{2})[-. ]?([0-9]{3})[-. ]?([0-9]{2})[-. ]?([0-9]{2})$/;
+	const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+
 
 	function validateFirstName() {
 		let inputElement = document.getElementById("fname");
@@ -109,7 +112,9 @@
 		let inputElement = document.getElementById("nrAdd");
     let nrAddValue = inputElement.value;
 
-		if (!nrAddValue.match(oneLetter)) {
+		if (!nrAddValue) {
+			return true;
+		} else if (!nrAddValue.match(oneLetter)) {
 			alert('Im Feld "Zusatz" bitte einen einstelligen Buchstabenzusatz eingeben oder das Feld leer lassen.');
 			return false;
 		} else {
@@ -146,20 +151,26 @@
 	}
 
 
-	let inputElementTelG = document.getElementById("telG");
-	let telGValue = inputElementTelG.value;
-
-	let inputElementTelP = document.getElementById("telP");
-	let telPValue = inputElementTelP.value;
 	
 
-	function validateTelG() {
-		//let inputElement = document.getElementById("telG");
-    	//let telGValue = inputElement.value;
+	function validateTelP() {
+		let inputElement = document.getElementById("telP");
+    	let telPValue = inputElement.value;
 
-		if (!telGValue && (!telPValue)) {
-			alert('Bitte mindestens eine Telefonnummer eingeben, wo wir Sie erreichen können.')
+		if (!telPValue.match(telInt)) {
+			alert('Bitte Ihre Rufnummer mit Ländercode im internationalen Format (+12 34 567 89 01) eingeben.')
 			return false
+		} else {
+			console.log(telPValue);
+			return true;
+		}
+	}
+
+	function validateTelG() {
+		let inputElement = document.getElementById("telG");
+    	let telGValue = inputElement.value;
+		if (!telGValue) {
+			return true
 		} else if (!telGValue.match(telInt)) {
 			alert('Bitte Ihre Rufnummer mit Ländercode im internationalen Format (+12 34 567 89 01) eingeben.')
 			return false
@@ -169,18 +180,30 @@
 		}
 	}
 
-	function validateTelP() {
-		//let inputElement = document.getElementById("telP");
-    	//let telPValue = inputElement.value;
+	function validateEmail() {
+		let inputElement = document.getElementById("email");
+		let emValue = inputElement.value;
 
-		if (!telGValue && (!telPValue)) {
-			alert('Bitte mindestens eine Telefonnummer eingeben, wo wir Sie erreichen können.')
-			return false
-		} else if (!telPValue.match(telInt)) {
-			alert('Bitte Ihre Rufnummer mit Ländercode im internationalen Format (+12 34 567 89 01) eingeben.')
-			return false
+		if (!emValue) {
+			alert('Bitte Emailadresse angeben');
+			return false;
+		} else if (!emValue.match(emailRegex)) {
+			alert('Korrigieren Sie bitte das Format der Email-Adresse');
+			return false;
 		} else {
-			console.log(telPValue);
+			console.log(emValue);
+			return true;
+		}
+	}
+
+	function validateBirthdate() {
+		let inputElement = document.getElementById("birthdate");
+		let bdValue = inputElement.value;
+
+		if (!bdValue) {
+			alert('Bitte Geburtsdatum angeben')
+			return false;
+		} else {
 			return true;
 		}
 	}
