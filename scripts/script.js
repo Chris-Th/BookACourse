@@ -28,7 +28,7 @@
 		if (!validateEmail()) return false;
 		if (!validateBirthdate()) return false;
 		if (!validateAgbCheck()) return false;
-		if (!validateVersJa() && !validateVersNein()) return false;
+		if (!validateVers()) return false;
 
 		alert('Alles gut');
 		return true;
@@ -204,14 +204,60 @@
 			alert('Bitte Geburtsdatum angeben')
 			return false;
 		} else {
+			console.log(bdValue);
 			return true;
 		}
 	}
 
+	function validateAgbCheck() {
+		let agbChecked = document.getElementById("agbCheck").checked;
 
-	function 
+		if (!agbChecked) {
+			alert("Bitte klicken Sie in die Checkbox, um zu bestätigen, dass Sie die Allgemeinen Geschäftsbedingungen gelesen und verstanden haben.");
+			return false;
+		} else {
+			console.log(agbChecked);
+			return true;
+		}
+	}
 
-	function validateInsRadioBtns() {
+	function validateVers() {
+		let checkedJa = document.getElementById("versJa").checked;
+		let checkedNein = document.getElementById("versNein").checked;
+		
+		if (checkedJa) {
+			let ja = "versJa";
+			console.log(ja);
+			return "Versicherung abgeschlossen";
+		} 
+		else if (checkedNein) {
+			let nein = "versNein";
+			console.log(nein);
+			return "keine Versicherung abgeschlossen.";
+		} 
+		else {
+			alert('Bitte bei "Annulationsversicherung" "ja" oder "nein" auswählen.')
+			
+			return false;
+		}
+		
+
+	}
+	
+	
+	/*function validateRadios() {
+		let radioValues = document.getElementsByName("vers");
+		let radio = radioValues.value;
+
+		for (let i = 0; i < radios.length, i++) {
+			if (radio[i].checked) {
+				console.log(radio[i].value);
+				return radio[i].value
+			}
+		}
+	}
+
+	/*function validateInsRadioBtns() {
 		let inputElementJa = document.getElementById("versJa");
 		let jaValue = inputElementJa.value;
 		let inputElementNein = document.getElementById("versNein");
