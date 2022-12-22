@@ -30,7 +30,7 @@
 		if (!validateAgbCheck()) return false;
 		if (!validateVers()) return false;
 
-		alert('Alles gut');
+		
 		return true;
 	}
 
