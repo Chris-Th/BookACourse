@@ -41,9 +41,9 @@
 	const telInt = /^\+?([0-9]{2})\)?[-. ]?([0-9]{2})[-. ]?([0-9]{3})[-. ]?([0-9]{2})[-. ]?([0-9]{2})$/;
 	const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-	function setLocalStorage(key, value) {
-		localStorage.setItem(key, value);
-	}
+	//function setLocalStorage(key, value) {
+	//	localStorage.setItem(key, value);
+	//}
 
 	function validateFirstName() {
 		let inputElement = document.getElementById("fname");
@@ -99,59 +99,63 @@
 
 	function validateStreetNr() {
 		let inputElement = document.getElementById("streetNr");
-    	let streetNrValue = inputElement.value;
+    	let value = inputElement.value;
 
-		if (!streetNrValue) {
+		if (!value) {
 			alert("Bitte die Hausnummer eingeben.");
 			return false;
-		} else if (!streetNrValue.match(numbers)) {
+		} else if (!value.match(numbers)) {
 			alert('Im Feld "Hausnummer" sind nur Nummern erlaubt. Ein Buchstaben-Zusatz kann im Feld "Zusatz" eingegeben werden.');
 			return false;
 		} else {
-			console.log(streetNrValue);
+			setLocalStorage("streetNr", value);
+			console.log(value);
 			return true;
 		}
 	}
 
 	function validateNrAdd() {
 		let inputElement = document.getElementById("nrAdd");
-    let nrAddValue = inputElement.value;
+    let value = inputElement.value;
 
-		if (!nrAddValue) {
+		if (!value) {
 			return true;
-		} else if (!nrAddValue.match(oneLetter)) {
+		} else if (!value.match(oneLetter)) {
 			alert('Im Feld "Zusatz" bitte einen einstelligen Buchstabenzusatz eingeben oder das Feld leer lassen.');
 			return false;
 		} else {
-			console.log(nrAddValue);
+			setLocalStorage("nrAdd", value);
+			console.log(value);
 			return true;
 		}
 	}
 
 	function validatePlz() {
 		let inputElement = document.getElementById("plz");
-    	let plzValue = inputElement.value;
+    	let value = inputElement.value;
 
-		if (!plzValue.match(fourDigits)) {
+		if (!value.match(fourDigits)) {
 			alert('Bitte im Feld "PLZ" eine in der Schweiz gültige Postleitzahl (vierstellige Zahl) eingeben.');
 			return false;
 		} else {
-			console.log(plzValue);
+			setLocalStorage("plz", value);
+			console.log(value);
 			return true;
 		}
 	}
 
 	function validateOrt() {
 		let inputElement = document.getElementById("ort");
-    	let ortValue = inputElement.value;
+    	let value = inputElement.value;
 
-		if (!ortValue) {
+		if (!value) {
 			// leerer String
 			alert('Im Feld "Wohnort" bitte Ortsnamen eingeben.');
 			return false;
 		} else {
-			console.log(ortValue)
-			return true
+			setLocalStorage("ort", value);
+			console.log(value);
+			return true;
 		}
 	}
 
@@ -160,68 +164,74 @@
 
 	function validateTelP() {
 		let inputElement = document.getElementById("telP");
-    	let telPValue = inputElement.value;
+    	let value = inputElement.value;
 
-		if (!telPValue.match(telInt)) {
+		if (!value.match(telInt)) {
 			alert('Bitte Ihre Rufnummer mit Ländercode im internationalen Format (+12 34 567 89 01) eingeben.')
 			return false
 		} else {
-			console.log(telPValue);
+			setLocalStorage("telP", value);
+			console.log(value);
 			return true;
 		}
 	}
 
 	function validateTelG() {
 		let inputElement = document.getElementById("telG");
-    	let telGValue = inputElement.value;
-		if (!telGValue) {
+    	let value = inputElement.value;
+		if (!value) {
 			return true
-		} else if (!telGValue.match(telInt)) {
+		} else if (!value.match(telInt)) {
 			alert('Bitte Ihre Rufnummer mit Ländercode im internationalen Format (+12 34 567 89 01) eingeben.')
 			return false
 		} else {
-			console.log(telGValue);
+			setLocalStorage("telG", value);
+			console.log(value);
 			return true;
 		}
 	}
 
 	function validateEmail() {
 		let inputElement = document.getElementById("email");
-		let emValue = inputElement.value;
+		let value = inputElement.value;
 
-		if (!emValue) {
+		if (!value) {
 			alert('Bitte Emailadresse angeben');
 			return false;
-		} else if (!emValue.match(emailRegex)) {
+		} else if (!value.match(emailRegex)) {
 			alert('Korrigieren Sie bitte das Format der Email-Adresse');
 			return false;
 		} else {
-			console.log(emValue);
+			setLocalStorage("email", value);
+			console.log(value);
 			return true;
 		}
 	}
 
 	function validateBirthdate() {
 		let inputElement = document.getElementById("birthdate");
-		let bdValue = inputElement.value;
+		let value = inputElement.value;
 
-		if (!bdValue) {
+		if (!value) {
 			alert('Bitte Geburtsdatum angeben')
 			return false;
 		} else {
-			console.log(bdValue);
+			setLocalStorage("birthdate", value);
+			console.log(value);
 			return true;
 		}
 	}
 
 	function validateAgbCheck() {
-		let agbChecked = document.getElementById("agbCheck").checked;
+		let inputElement = document.getElementById("agbCheck").checked;
+		let value = inputElement.value;
 
-		if (!agbChecked) {
+		if (!value) {
 			alert("Bitte klicken Sie in die Checkbox, um zu bestätigen, dass Sie die Allgemeinen Geschäftsbedingungen gelesen und verstanden haben.");
 			return false;
 		} else {
-			console.log(agbChecked);
+			setLocalStorage("agbCheck", value);
+			console.log(value);
 			return true;
 		}
 	}
