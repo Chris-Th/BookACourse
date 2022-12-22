@@ -14,6 +14,6 @@ The booking Form offers a pretty elaborate input validation, not only catching e
 
 Also, a confirmation page with form input data feedback is in the making. The page exists, but I've been running into problems with the feedback generation and it is unsure wther or not I will be able to solve this problem in time.
 
-## responsiveness
 
+## responsiveness
 On mobile, except for one row, its a 1-column form, expanding into a 2-column layout on wider screens. To achieve this, bootsrap 5 was used with the flexbox "d-flex" class.

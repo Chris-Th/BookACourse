@@ -22,7 +22,7 @@ function confirmUserData() {
     let insurance = getLocalStorage("versicherung");
 
 
-    let confirmationMsg = `<p><span class="label">Vorname:</span><span class="value"> ${fName} ${lName}</span></p>`;
+    let confirmationMsg = `<p><span class="label">Vorname:</span><span class="value"> ${fName}</span></p>`;
 
     document.getElementById("dataConfirmation").innerHTML = confirmationMsg;
 

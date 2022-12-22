@@ -44,7 +44,7 @@ body {
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
-
+/* Prevent inheritance from `body` */
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
   border-bottom-color: rgba(255, 255, 255, .25);
@@ -57,4 +57,10 @@ body {
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+/* confirmation page */
+
+.label {
+    font-weight: bold;
 }
