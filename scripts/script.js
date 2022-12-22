@@ -41,7 +41,7 @@
 	const telInt = /^\+?([0-9]{2})\)?[-. ]?([0-9]{2})[-. ]?([0-9]{3})[-. ]?([0-9]{2})[-. ]?([0-9]{2})$/;
 	const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-	function localStorageSet(key, value) {
+	function setLocalStorage(key, value) {
 		localStorage.setItem(key, value);
 	}
 
@@ -56,7 +56,7 @@
 				alert("Bitte beim Vornamen nur Buchstaben eingeben.");
 				return false;
 			} else {
-				localStorageSet("fname", value);
+				setLocalStorage("fname", value);
 				console.log(value);
 				return true;
 			}
@@ -76,7 +76,7 @@
 				alert("Bitte beim Nachnamen nur Buchstaben eingeben.");
 				return false;
 			} else {
-				localStorageSet("lname", value);
+				setLocalStorage("lname", value);
 				console.log(value);
 				return true;
 			}
@@ -91,7 +91,7 @@
 			alert("Bitte Strassennamen eingeben.");
 			return false;
 		} else {
-			localStorageSet("street", value);
+			setLocalStorage("street", value);
 			console.log(value)
 			return true
 		}
@@ -231,13 +231,13 @@
 		let checkedNein = document.getElementById("versNein").checked;
 		
 		if (checkedJa) {
-			localStorageSet("versicherung", "eine Versicherung");
+			setLocalStorage("versicherung", "eine Versicherung");
 			let ja = "versJa";
 			console.log(ja);
 			return true;
 		} 
 		else if (checkedNein) {
-			localStorageSet("versicherung", "keine Versicherung");
+			setLocalStorage("versicherung", "keine Versicherung");
 			let nein = "versNein";
 			console.log(nein);
 			return true;
