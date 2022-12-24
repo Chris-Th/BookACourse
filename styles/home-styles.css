@@ -89,6 +89,9 @@ html, body {
 
 .logo:hover {
   width: 11rem;
+  rotate: 2 1 1 60deg;
+  box-shadow: -3rem 2rem 3rem 2rem #cceeFF;
+
 }
 
 .nav-masthead .active {
@@ -97,10 +100,12 @@ html, body {
 }
 
 .icon {
-width: 2.5rem;
+width: 2.5rem; 
 }
+
 .icon:hover {
   width:3.5rem;
+  rotate: 2 1 1 60deg;
 }
 
 
