@@ -84,7 +84,11 @@ html, body {
 }
 
 .logo {
-  width: 150px
+  width: 10rem;
+}
+
+.logo:hover {
+  width: 11rem;
 }
 
 .nav-masthead .active {
@@ -94,6 +98,9 @@ html, body {
 
 .icon {
 width: 2.5rem;
+}
+.icon:hover {
+  width:3.5rem;
 }
 
 
