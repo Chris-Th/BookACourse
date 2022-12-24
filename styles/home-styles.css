@@ -5,13 +5,21 @@
 
 
 /* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #74C9FF;
+  color: #fff;
   text-shadow: none; /* Prevent inheritance from `body` */
 }
 
+.btn-primary:hover {
+  box-shadow: inset 0 0 2rem rgba(0, 0, 0, 1.0);
+}
+
+a {
+  text-decoration: none;
+}
 
 /*
  * Base structure
@@ -19,7 +27,7 @@
 
 html, body {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 3rem #888888ff;
   height: 100%;
 }
 
@@ -28,7 +36,11 @@ html, body {
 }
 
 .btn {
-  box-shadow: inset 0 0 1rem rgba(0, 0, 0, .6);
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, .8);
+}
+
+.btn-primary {
+  background-color: #74C9FF;
 }
 
 .cover-container {
@@ -71,13 +83,17 @@ html, body {
   margin-left: 1rem;
 }
 
+.logo {
+  width: 150px
+}
+
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
 }
 
 .icon {
-  color: #fff;
+width: 2.5rem;
 }
 
 
