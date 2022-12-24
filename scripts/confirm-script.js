@@ -16,25 +16,25 @@ function confirmUserData() {
     let zip = getLocalStorage("plz");
     let city = getLocalStorage("ort");
     let pPhone = getLocalStorage("telP");
-    let gPhome = getLocalStorage("telG");
+    let gPhone = getLocalStorage("telG");
     let mail = getLocalStorage("email");
     let bornOn = getLocalStorage("birthdate");
     let insurance = getLocalStorage("versicherung");
 
 
-    let confirmationMsg = `<p><span class="label">Vorname:</span><span class="value"> ${fName}</span></p>
-    <p><span class="label">Vorname:</span><span class="value"> ${fName}</span></p>;
-    <p><span class="label">Vorname:</span><span class="value"> ${lName}</span></p>;
-    <p><span class="label">Vorname:</span><span class="value"> ${street}</span></p>;
-    <p><span class="label">Vorname:</span><span class="value"> ${streetNr}</span></p>;
-    <p><span class="label">Vorname:</span><span class="value"> ${nrAdd}</span></p>;
-    <p><span class="label">Vorname:</span><span class="value"> ${plz}</span></p>;
-    <p><span class="label">Vorname:</span><span class="value"> ${ort}</span></p>;
-    <p><span class="label">Vorname:</span><span class="value"> ${telP}</span></p>;
-    <p><span class="label">Vorname:</span><span class="value"> ${telG}</span></p>;
-    <p><span class="label">Vorname:</span><span class="value"> ${email}</span></p>;
-    <p><span class="label">Vorname:</span><span class="value"> ${birthdate}</span></p>;
-    <p><span class="label">Vorname:</span><span class="value"> ${versicherung}</span></p>;
+    let confirmationMsg = 
+    `<p><span class="label">Vorname:</span><span class="value"> ${fName}</span></p>
+    <p><span class="label">Nachname:</span><span class="value"> ${lName}</span></p>
+    <p><span class="label">Strasse:</span><span class="value"> ${streetName}</span></p>
+    <p><span class="label">Nummer:</span><span class="value"> ${streetNumber}</span></p>
+    <p><span class="label">Zusatz:</span><span class="value"> ${numberAdd}</span></p>
+    <p><span class="label">PLZ:</span><span class="value"> ${zip}</span></p>
+    <p><span class="label">Ort:</span><span class="value"> ${city}</span></p>
+    <p><span class="label">Tel P:</span><span class="value"> ${pPhone}</span></p>
+    <p><span class="label">Tel G:</span><span class="value"> ${gPhone}</span></p>
+    <p><span class="label">Email:</span><span class="value"> ${mail}</span></p>
+    <p><span class="label">Geburtsdatum:</span><span class="value"> ${bornOn}</span></p>
+    <p><span class="label">Versicherung:</span><span class="value"> Sie haben ${insurance} gelöst.</span></p>`
 
     document.getElementById("dataConfirmation").innerHTML = confirmationMsg;
 

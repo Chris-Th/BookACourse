@@ -34,7 +34,7 @@
             return true;
         }
     
-        const letters = /^[A-Za-z]+$/;
+        const letters = /^[A-Za-z\-äöüàéè]+$/i;
         const oneLetter = /^[A-Za-z]{1}$/;
         const numbers = /^[0-9]+$/;
         const fourDigits = /^[0-9]{4}$/;
@@ -92,51 +92,54 @@
                 return false;
             } else {
                 setLocalStorage("street", value);
-                console.log(value)
-                return true
+                console.log(value);
+                return true;
             }
         }
     
         function validateStreetNr() {
             let inputElement = document.getElementById("streetNr");
-            let streetNrValue = inputElement.value;
+            let value = inputElement.value;
     
-            if (!streetNrValue) {
+            if (!value) {
                 alert("Bitte die Hausnummer eingeben.");
                 return false;
-            } else if (!streetNrValue.match(numbers)) {
+            } else if (!value.match(numbers)) {
                 alert('Im Feld "Hausnummer" sind nur Nummern erlaubt. Ein Buchstaben-Zusatz kann im Feld "Zusatz" eingegeben werden.');
                 return false;
             } else {
-                console.log(streetNrValue);
+                setLocalStorage("streetNr", value);
+                console.log(value);
                 return true;
             }
         }
     
         function validateNrAdd() {
             let inputElement = document.getElementById("nrAdd");
-        let nrAddValue = inputElement.value;
+        let value = inputElement.value;
     
-            if (!nrAddValue) {
+            if (!value) {
                 return true;
-            } else if (!nrAddValue.match(oneLetter)) {
+            } else if (!value.match(oneLetter)) {
                 alert('Im Feld "Zusatz" bitte einen einstelligen Buchstabenzusatz eingeben oder das Feld leer lassen.');
                 return false;
             } else {
-                console.log(nrAddValue);
+                setLocalStorage("nrAdd", value);
+                console.log(value);
                 return true;
             }
         }
     
         function validatePlz() {
             let inputElement = document.getElementById("plz");
-            let plzValue = inputElement.value;
+            let value = inputElement.value;
     
-            if (!plzValue.match(fourDigits)) {
+            if (!value.match(fourDigits)) {
                 alert('Bitte im Feld "PLZ" eine in der Schweiz gültige Postleitzahl (vierstellige Zahl) eingeben.');
                 return false;
             } else {
-                console.log(plzValue);
+                setLocalStorage("plz", value);
+                console.log(value);
                 return true;
             }
         }
@@ -150,6 +153,7 @@
                 alert('Im Feld "Wohnort" bitte Ortsnamen eingeben.');
                 return false;
             } else {
+                setLocalStorage("ort", ortValue)
                 console.log(ortValue)
                 return true
             }
@@ -166,6 +170,7 @@
                 alert('Bitte Ihre Rufnummer mit Ländercode im internationalen Format (+12 34 567 89 01) eingeben.')
                 return false
             } else {
+                setLocalStorage("telP", telPValue);
                 console.log(telPValue);
                 return true;
             }
@@ -180,6 +185,7 @@
                 alert('Bitte Ihre Rufnummer mit Ländercode im internationalen Format (+12 34 567 89 01) eingeben.')
                 return false
             } else {
+                setLocalStorage("telG", telGValue);
                 console.log(telGValue);
                 return true;
             }
@@ -196,6 +202,7 @@
                 alert('Korrigieren Sie bitte das Format der Email-Adresse');
                 return false;
             } else {
+                setLocalStorage("email", emValue);
                 console.log(emValue);
                 return true;
             }
@@ -209,6 +216,7 @@
                 alert('Bitte Geburtsdatum angeben')
                 return false;
             } else {
+                setLocalStorage("birthdate", bdValue);
                 console.log(bdValue);
                 return true;
             }
